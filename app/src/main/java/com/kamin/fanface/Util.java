@@ -21,8 +21,8 @@ public class Util {
         }
     }
 
-    public static Camera getCamera(Context context) {
-        Camera camera = null;
+    public static Camera getCamera(Context context, Camera camera ) {
+        camera = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             if (ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
                 ActivityCompat.requestPermissions((MainActivity) context, new String[]{Manifest.permission.CAMERA}, RequestCodeCamera);
